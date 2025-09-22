@@ -13,9 +13,9 @@
 
 ## TODOs
 - [ ] Release Inference code.
-- [ ] Release Training code.
 - [ ] Release checkpoint.
 - [ ] Release paper to Arxiv.
+- [ ] Support vllm inference speeds up.
 - [ ] Support local deployment.
 - [ ] Support Streaming Inference.
 - [ ] Online serving on Hugging Face Space.
