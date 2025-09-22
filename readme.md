@@ -7,13 +7,10 @@
 
 
 ## Architecture
-<p align="center">
+<!-- <p align="center">
     <img src="assets/SoulX-Podcast.png" width="500"/>
-<p>
+<p> -->
 
-
-
-<br>
 ## TODOs
 - [ ] Release Inference code.
 - [ ] Release Training code.
@@ -22,6 +19,9 @@
 - [ ] Support local deployment.
 - [ ] Support Streaming Inference.
 - [ ] Online serving on Hugging Face Space.
+
+
+<br>
 
 ## Checkpoint
 
