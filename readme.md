@@ -33,7 +33,7 @@ Following the steps below to clone the repository and install the environment.
 
 ## License Agreement
 
-We use the Apache 2.0 license. Researchers and developers are free to use the codes and model weights of our SoulX-Podcast. Check the license at [LICENSE](LICENSE.txt) for more details.
+We use the Apache 2.0 license. Researchers and developers are free to use the codes and model weights of our SoulX-Podcast. Check the license at [LICENSE](LICENSE) for more details.
 <br>
 
 ## Citation
