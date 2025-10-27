@@ -147,6 +147,7 @@ bash example/infer_dialogue.sh
 ```
 
 ## TODOs
+- [ ] Add example scripts for monologue TTS.
 - [ ] Publish the technical report.
 - [ ] Develop a WebUI for easy inference.
 - [ ] Deploy an online demo on Hugging Face Spaces.
