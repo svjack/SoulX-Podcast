@@ -29,7 +29,7 @@ SoulX-Podcast is designed for podcast-style multi-turn, multi-speaker dialogic s
 To meet the higher naturalness demands of multi-turn spoken dialogue, SoulX-Podcast integrates a range of paralinguistic controls and supports both Mandarin and English, as well as several Chinese dialects, including Sichuanese, Henanese, and Cantonese, enabling more personalized podcast-style speech generation.
 
 
-## Key Features
+## Key Features 🔥
 
 - **Long-form, multi-turn, multi-speaker dialogic speech generation**: SoulX-Podcast excels in generating high-quality, natural-sounding dialogic speech for multi-turn, multi-speaker scenarios.
 
@@ -39,11 +39,44 @@ To meet the higher naturalness demands of multi-turn spoken dialogue, SoulX-Podc
 
 <table align="center">
   <tr>
-    <td align="center"><br><img src="assets/performance_radar.png" width="60%" /></td>
+    <td align="center"><br><img src="assets/performance_radar.png" width="80%" /></td>
   </tr>
 </table>
 
 
+## Demo Examples
+
+**Zero-Shot Podcast Generation**
+<div align="center">
+
+<https://github.com/user-attachments/assets/a0be9a05-ac00-42ea-ace2-72dc597c3381>
+
+</div>
+
+
+**Cross-Dialectal Zero-Shot Podcast Generation**
+
+🎙️ All prompt audio samples used in the following generations are in Mandarin.
+🎙️ 以下音频生成采用的参考音频全部为普通话。
+
+<div align="center">
+
+<https://github.com/user-attachments/assets/426f05bd-e703-4d3e-bff8-e6549cfe3507>
+
+</div>
+<div align="center">
+
+https://github.com/user-attachments/assets/89aff9ef-7c10-4dfd-a401-c0ad8b0e1204
+
+</div>
+
+<div align="center">
+
+https://github.com/user-attachments/assets/4db081f5-2530-4c80-93db-5ad3d5ec781c
+
+</div>
+
+For more examples, see [demo page](https://soul-ailab.github.io/soulx-podcast/).
 
 ## Install
 
