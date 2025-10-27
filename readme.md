@@ -142,11 +142,8 @@ git clone https://huggingface.co/Soul-AILab/SoulX-Podcast-1.7B-dialect pretraine
 
 You can simply run the demo with the following commands:
 ``` sh
-cd example
 # dialectal inference
-bash inference_dialog.sh
-# monologue inference
-bash inference_tts.sh
+bash example/infer_dialogue.sh
 ```
 
 ## TODOs
