@@ -12,8 +12,8 @@
     </p>
     <p>
     </p>
-    <a href="https://github.com/Soul-AILab/SoulX-Podcast"><img src="https://img.shields.io/badge/Demo-Page-lightgrey" alt="version"></a>
-    <a href="https://huggingface.co/Soul-AILab"><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue' alt="HF-model"></a>
+    <a href="https://soul-ailab.github.io/soulx-podcast/"><img src="https://img.shields.io/badge/Demo-Page-lightgrey" alt="version"></a>
+    <a href="https://huggingface.co/collections/Soul-AILab/soulx-podcast"><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue' alt="HF-model"></a>
     <a href="https://arxiv.org/abs/0000.0000"><img src='https://img.shields.io/badge/Technique-Report-red' alt="technical report"></a>
     <a href="https://github.com/Soul-AILab/SoulX-Podcast"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache-2.0"></a>
 </div>
@@ -62,18 +62,18 @@ To meet the higher naturalness demands of multi-turn spoken dialogue, SoulX-Podc
 
 <div align="center">
 
-<https://github.com/user-attachments/assets/6bf2b0ad-9b5a-4a21-92d9-b7793dcdd12d>
+<https://github.com/user-attachments/assets/982d799b-9f91-40a3-ab64-9e165166f788>
 
 </div>
 <div align="center">
 
-<https://github.com/user-attachments/assets/8571b7b0-52cf-4552-bbed-f5cd88a8949f>
+<https://github.com/user-attachments/assets/d0a59d7b-27c9-4b47-8242-f7630814c1e9>
 
 </div>
 
 <div align="center">
 
-<https://github.com/user-attachments/assets/426f05bd-e703-4d3e-bff8-e6549cfe3507>
+<https://github.com/user-attachments/assets/a53ff35c-1e2b-42d9-9ef4-279164574646>
 
 </div>
 
