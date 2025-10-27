@@ -49,7 +49,7 @@ To meet the higher naturalness demands of multi-turn spoken dialogue, SoulX-Podc
 **Zero-Shot Podcast Generation**
 <div align="center">
 
-<https://github.com/user-attachments/assets/a0be9a05-ac00-42ea-ace2-72dc597c3381>
+<https://github.com/user-attachments/assets/a9d3da2a-aaff-49d0-a3c7-2bd3c0b6d5eb>
 
 </div>
 
@@ -57,22 +57,23 @@ To meet the higher naturalness demands of multi-turn spoken dialogue, SoulX-Podc
 **Cross-Dialectal Zero-Shot Podcast Generation**
 
 🎙️ All prompt audio samples used in the following generations are in Mandarin.
+
 🎙️ 以下音频生成采用的参考音频全部为普通话。
 
 <div align="center">
 
+<https://github.com/user-attachments/assets/6bf2b0ad-9b5a-4a21-92d9-b7793dcdd12d>
+
+</div>
+<div align="center">
+
+<https://github.com/user-attachments/assets/8571b7b0-52cf-4552-bbed-f5cd88a8949f>
+
+</div>
+
+<div align="center">
+
 <https://github.com/user-attachments/assets/426f05bd-e703-4d3e-bff8-e6549cfe3507>
-
-</div>
-<div align="center">
-
-https://github.com/user-attachments/assets/89aff9ef-7c10-4dfd-a401-c0ad8b0e1204
-
-</div>
-
-<div align="center">
-
-https://github.com/user-attachments/assets/4db081f5-2530-4c80-93db-5ad3d5ec781c
 
 </div>
 
