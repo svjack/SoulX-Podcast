@@ -188,3 +188,18 @@ Ensure compliance with local laws and regulations when using this model and upho
 The developers assume no liability for any misuse of this model.
 
 We advocate for the responsible development and use of AI and encourage the community to uphold safety and ethical principles in AI research and applications. If you have any concerns regarding ethics or misuse, please contact us.
+
+## Contact us
+If you are interested in leaving a message to our work, feel free to email hkxie@mail.nwpu.edu.cn or linhaopeng@soulapp.cn or lxie@nwpu.edu.cn or wangxinsheng@soulapp.cn
+
+You’re welcome to join our WeChat group for technical discussions, updates.
+<p align="center">
+<img src="assets/wechat.jpg" width="300" alt="WeChat Group QR Code"/>
+<br>
+<em>Scan to join our WeChat discussion group</em>
+<br>
+</p>
+<!-- <p align="center">
+    <img src="src/figs/npu@aslp.jpeg" width="500"/>
+</p -->
+<!-- <img src="assets/wechat.jpg -->
