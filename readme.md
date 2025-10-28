@@ -14,7 +14,8 @@
     </p>
     <a href="https://soul-ailab.github.io/soulx-podcast/"><img src="https://img.shields.io/badge/Demo-Page-lightgrey" alt="version"></a>
     <a href="https://huggingface.co/collections/Soul-AILab/soulx-podcast"><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue' alt="HF-model"></a>
-    <a href="https://arxiv.org/abs/0000.0000"><img src='https://img.shields.io/badge/Technique-Report-red' alt="technical report"></a>
+    <a href="assets/SoulXPodcast_technical_report.pdf"><img src='https://img.shields.io/badge/Report-Github?label=Technical&color=red
+' alt="technical report"></a>
     <a href="https://github.com/Soul-AILab/SoulX-Podcast"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache-2.0"></a>
 </div>
 
