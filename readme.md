@@ -148,7 +148,7 @@ bash example/infer_dialogue.sh
 
 ## TODOs
 - [ ] Add example scripts for monologue TTS.
-- [ ] Publish the technical report.
+- [x] Publish the [technical report](https://arxiv.org/pdf/2510.23541).
 - [ ] Develop a WebUI for easy inference.
 - [ ] Deploy an online demo on Hugging Face Spaces.
 - [ ] Dockerize the project with vLLM support.
