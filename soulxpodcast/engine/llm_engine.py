@@ -8,7 +8,7 @@ from dataclasses import fields, asdict
 import torch
 import torch.multiprocessing as mp
 from transformers import AutoTokenizer, AutoModelForCausalLM, StoppingCriteriaList
-from transformers import EosTokenCriteria
+from transformers import EosTokenCriteria, RepetitionPenaltyLogitsProcessor
 try:    
     from vllm import LLM
     from vllm import SamplingParams as VllmSamplingParams
@@ -48,7 +48,10 @@ class HFLLMEngine:
                     win_size=sampling_param.win_size, tau_r=sampling_param.tau_r)
         else:
             sample_hf_engine_handler = None
-
+        rep_pen_processor = RepetitionPenaltyLogitsProcessor(
+            penalty=sampling_param.repetition_penalty,
+            prompt_ignore_length=len(prompt)
+        ) # exclude the input prompt, consistent with vLLM implementation;
         with torch.no_grad(): 
             input_len = len(prompt)
             generated_ids = self.model.generate(
@@ -58,11 +61,11 @@ class HFLLMEngine:
                 top_p=sampling_param.top_p,
                 max_new_tokens=sampling_param.max_tokens,
                 temperature=sampling_param.temperature,
-                repetition_penalty=sampling_param.repetition_penalty,
                 stopping_criteria=stopping_criteria,
                 past_key_values=past_key_values,
                 custom_generate=sample_hf_engine_handler,
                 use_cache=True,
+                logits_processor=[rep_pen_processor]
             )
             generated_ids = generated_ids[:, input_len:].cpu().numpy().tolist()[0]
         output = {

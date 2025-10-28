@@ -126,6 +126,7 @@ class SoulXPodcast(torch.nn.Module):
                     prompt_inputs[-self.config.history_context:]
                 ))
                 valid_turn_size = self.config.prompt_context + len(history_inputs) - prompt_text_bound
+                past_key_values = DynamicCache(config=cache_config)
             valid_turn_size += 1
             
             inputs.extend(text_tokens_for_llm[i])

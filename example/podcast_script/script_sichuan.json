@@ -3,7 +3,7 @@
       "S1": {
         "prompt_audio": "example/audios/female_mandarin.wav",
         "prompt_text": "喜欢攀岩、徒步、滑雪的语言爱好者，以及过两天要带着全部家当去景德镇做陶瓷的白日梦想家。",
-        "dialect_prompt": "<|Sichuan|>哪个晓得耍耍哒哒的，倒把生科院的门门儿敲开啰！现在天天泡实验室，跟那些瓶瓶罐罐打交道，硬是闻到福尔马林的味道都比屋头泡菜坛子亲切喽！"
+        "dialect_prompt": "<|Sichuan|>要得要得！前头几个耍洋盘，我后脚就背起铺盖卷去景德镇耍泥巴，巴适得喊老天爷！"
       },
       "S2": {
         "prompt_audio": "example/audios/male_mandarin.wav",

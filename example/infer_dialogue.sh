@@ -8,4 +8,5 @@ input_file=example/podcast_script/script_mandarin.json
 python cli/podcast.py \
         --json_path ${input_file} \
         --model_path ${model_dir} \
-        --output_path outputs/mandarin.wav
+        --output_path outputs/mandarin.wav \
+        --seed 7
