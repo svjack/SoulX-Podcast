@@ -14,8 +14,7 @@
     </p>
     <a href="https://soul-ailab.github.io/soulx-podcast/"><img src="https://img.shields.io/badge/Demo-Page-lightgrey" alt="version"></a>
     <a href="https://huggingface.co/collections/Soul-AILab/soulx-podcast"><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue' alt="HF-model"></a>
-    <a href="assets/SoulXPodcast_technical_report.pdf"><img src='https://img.shields.io/badge/Report-Github?label=Technical&color=red
-' alt="technical report"></a>
+    <a href="https://arxiv.org/pdf/2510.23541"><img src='https://img.shields.io/badge/Report-Github?label=Technical&color=red' alt="technical report"></a>
     <a href="https://github.com/Soul-AILab/SoulX-Podcast"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="Apache-2.0"></a>
 </div>
 
@@ -154,6 +153,19 @@ bash example/infer_dialogue.sh
 - [ ] Deploy an online demo on Hugging Face Spaces.
 - [ ] Dockerize the project with vLLM support.
 - [ ] Add support for streaming inference.
+
+## Citation
+
+```bibtex
+@misc{SoulXPodcast,
+  title        = {SoulX-Podcast: Towards Realistic Long-form Podcasts with Dialectal and Paralinguistic Diversity},
+  author       = {Hanke Xie and Haopeng Lin and Wenxiao Cao and Dake Guo and Wenjie Tian and Jun Wu and Hanlin Wen and Ruixuan Shang and Hongmei Liu and Zhiqi Jiang and Yuepeng Jiang and Wenxi Chen and Ruiqi Yan and Jiale Qian and Yichao Yan and Shunshun Yin and Ming Tao and Xie Chen and Lei Xie and Xinsheng Wang},
+  year         = {2025},
+  archivePrefix={arXiv},
+  url          = {https://arxiv.org/abs/2510.23541}
+}
+
+```
 
 ## License
 
