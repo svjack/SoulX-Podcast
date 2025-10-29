@@ -79,6 +79,13 @@ To meet the higher naturalness demands of multi-turn spoken dialogue, SoulX-Podc
 
 For more examples, see [demo page](https://soul-ailab.github.io/soulx-podcast/).
 
+
+## 🚀 News
+
+- **[2025-10-29]** We are excited to announce that the latest SoulX-Podcast checkpoint is now available on Hugging Face! You can access it directly from [SoulX-Podcast-hugging-face](https://huggingface.co/collections/Soul-AILab/soulx-podcast).
+
+- **[2025-10-28]** Our paper on this project has been published! You can read it here: [SoulX-Podcast](https://arxiv.org/pdf/2510.23541).
+
 ## Install
 
 ### Clone and Install
