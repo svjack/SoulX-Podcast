@@ -201,11 +201,16 @@ If you are interested in leaving a message to our work, feel free to email hkxie
 
 You’re welcome to join our WeChat group for technical discussions, updates.
 <p align="center">
-<img src="assets/wechat.jpg" width="300" alt="WeChat Group QR Code"/>
-<br>
-<em>Scan to join our WeChat discussion group</em>
-<br>
+  <em>Due to group limits, if you can't scan the QR code, please add my WeChat for group access: <strong>Tiamo James</strong></em>
+  <br>
+  <span style="display: inline-block; margin-right: 10px;">
+    <img src="assets/wechat.jpg" width="300" alt="WeChat Group QR Code"/>
+  </span>
+  <span style="display: inline-block;">
+    <img src="assets/wechat_tiamo.jpg" width="300" alt="WeChat QR Code"/>
+  </span>
 </p>
+
 <!-- <p align="center">
     <img src="src/figs/npu@aslp.jpeg" width="500"/>
 </p -->
