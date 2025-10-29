@@ -201,7 +201,8 @@ If you are interested in leaving a message to our work, feel free to email hkxie
 
 You’re welcome to join our WeChat group for technical discussions, updates.
 <p align="center">
-  <em>Due to group limits, if you can't scan the QR code, please add my WeChat for group access: <strong>Tiamo James</strong></em>
+  <em>Due to group limits, if you can't scan the QR code, please add my WeChat for group access 
+      <!-- : <strong>Tiamo James</strong></em> -->
   <br>
   <span style="display: inline-block; margin-right: 10px;">
     <img src="assets/wechat.jpg" width="300" alt="WeChat Group QR Code"/>
