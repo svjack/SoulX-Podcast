@@ -109,6 +109,7 @@ class SamplingParams:
     repetition_penalty: float = 1.25
     top_k: int = 100
     top_p: float = 0.9
+    min_tokens: int = 8
     max_tokens: int = 3000
     stop_token_ids: list[int] = field(default_factory=lambda: [151675])
     # RasSampler parameters

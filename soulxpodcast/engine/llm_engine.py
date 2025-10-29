@@ -59,6 +59,7 @@ class HFLLMEngine:
                 do_sample=True,
                 top_k=sampling_param.top_k,
                 top_p=sampling_param.top_p,
+                min_new_tokens=sampling_param.min_tokens,
                 max_new_tokens=sampling_param.max_tokens,
                 temperature=sampling_param.temperature,
                 stopping_criteria=stopping_criteria,
