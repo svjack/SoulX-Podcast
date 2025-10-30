@@ -166,7 +166,7 @@ _i18n_key2lang_dict = dict(
         en='Invalid speaker 2 prompt text, should strictly follow: "[S2]xxx"',
         zh='说话人 2 参考文本不合规，格式："[S2]xxx"',
     ),
-    # Warining2: invalid text for dialogue input
+    
     warn_invalid_dialogue_text=dict(
         en='Invalid dialogue input text, should strictly follow: "[S1]xxx[S2]xxx..."',
         zh='对话文本输入不合规，格式："[S1]xxx[S2]xxx..."',
