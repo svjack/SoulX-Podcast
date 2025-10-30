@@ -162,10 +162,6 @@ _i18n_key2lang_dict = dict(
         en='Invalid speaker 1 prompt text, should not be empty and strictly follow: "xxx"',
         zh='说话人 1 参考文本不合规，不能为空，格式："xxx"',
     ),
-    # warn_invalid_spk1_prompt_cot_text=dict(
-    #     en='Invalid speaker 1 prompt cot text, should not be empty and strictly follow: "[S1]xxx"',
-    #     zh='说话人 1 参考文本不合规，格式："[S1]xxx"',
-    # ),
     warn_invalid_spk2_prompt_text=dict(
         en='Invalid speaker 2 prompt text, should strictly follow: "[S2]xxx"',
         zh='说话人 2 参考文本不合规，格式："[S2]xxx"',
