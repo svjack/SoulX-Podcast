@@ -96,7 +96,6 @@ def initiate_model(config: Config, enable_tn: bool=False):
 # ================================================
 
 _i18n_key2lang_dict = dict(
-    # ... (此处省略所有 i18n 字典内容，保持原样) ...
     # Speaker1 Prompt
     spk1_prompt_audio_label=dict(
         en="Speaker 1 Prompt Audio",
