@@ -82,6 +82,8 @@ For more examples, see [demo page](https://soul-ailab.github.io/soulx-podcast/).
 
 ## 🚀 News
 
+- **[2025-10-30]** Add example scripts for monologue TTS and support a WebUI for easy inference.
+
 - **[2025-10-29]** We are excited to announce that the latest SoulX-Podcast checkpoint is now available on Hugging Face! You can access it directly from [SoulX-Podcast-hugging-face](https://huggingface.co/collections/Soul-AILab/soulx-podcast).
 
 - **[2025-10-28]** Our paper on this project has been published! You can read it here: [SoulX-Podcast](https://arxiv.org/pdf/2510.23541).
@@ -153,10 +155,24 @@ You can simply run the demo with the following commands:
 bash example/infer_dialogue.sh
 ```
 
+### WebUI
+
+You can simply run the webui with the following commands:
+``` sh
+# Base Model:
+python3 webui.py --model_path pretrained_models/SoulX-Podcast-1.7B
+
+# If you want to experience dialect podcast generation, use the dialectal model:
+python3 webui.py --model_path pretrained_models/SoulX-Podcast-1.7B-dialect
+
+
+```
+
+
 ## TODOs
-- [ ] Add example scripts for monologue TTS.
+- [x] Add example scripts for monologue TTS.
 - [x] Publish the [technical report](https://arxiv.org/pdf/2510.23541).
-- [ ] Develop a WebUI for easy inference.
+- [x] Develop a WebUI for easy inference.
 - [ ] Deploy an online demo on Hugging Face Spaces.
 - [ ] Dockerize the project with vLLM support.
 - [ ] Add support for streaming inference.
@@ -196,7 +212,7 @@ The developers assume no liability for any misuse of this model.
 
 We advocate for the responsible development and use of AI and encourage the community to uphold safety and ethical principles in AI research and applications. If you have any concerns regarding ethics or misuse, please contact us.
 
-## Contact us
+## Contact Us
 If you are interested in leaving a message to our work, feel free to email hkxie@mail.nwpu.edu.cn or linhaopeng@soulapp.cn or lxie@nwpu.edu.cn or wangxinsheng@soulapp.cn
 
 You’re welcome to join our WeChat group for technical discussions, updates.
