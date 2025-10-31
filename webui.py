@@ -109,12 +109,12 @@ _i18n_key2lang_dict = dict(
         en="text of speaker 1 Prompt audio.",
         zh="说话人 1 参考文本",
     ),
-    spk1_prompt_cot_text_label=dict(
-        en="Speaker 1 Prompt COT Text",
-        zh="说话人 1 参考推理链文本",
+    spk1_dialect_prompt_text_label=dict(
+        en="Speaker 1 Dialect Prompt Text",
+        zh="说话人 1 方言提示文本",
     ),
-    spk1_prompt_cot_text_placeholder=dict(
-        en="Dialect prompt cot text with prefix: <|Sichuan|>/<|Yue|>/<|Henan|> ",
+    spk1_dialect_prompt_text_placeholder=dict(
+        en="Dialect prompt text with prefix: <|Sichuan|>/<|Yue|>/<|Henan|> ",
         zh="带前缀方言提示词思维链文本，前缀如下：<|Sichuan|>/<|Yue|>/<|Henan|>，如：<|Sichuan|>走嘛，切吃那家新开的麻辣烫，听别个说味道硬是霸道得很，好吃到不摆了，去晚了还得排队！",
     ),
     # Speaker2 Prompt
@@ -127,15 +127,15 @@ _i18n_key2lang_dict = dict(
         zh="说话人 2 参考文本",
     ),
     spk2_prompt_text_placeholder=dict(
-        en="[S2] text of speaker 2 prompt audio.",
-        zh="[S2] 说话人 2 参考文本",
+        en="text of speaker 2 prompt audio.",
+        zh="说话人 2 参考文本",
     ),
-    spk2_prompt_cot_text_label=dict(
-        en="Speaker 2 Prompt COT Text",
-        zh="说话人 2 参考推理链文本",
+    spk2_dialect_prompt_text_label=dict(
+        en="Speaker 2 Dialect Prompt Text",
+        zh="说话人 2 方言提示文本",
     ),
-    spk2_prompt_cot_text_placeholder=dict(
-        en="Dialect prompt cot text with prefix: <|Sichuan|>/<|Yue|>/<|Henan|> ",
+    spk2_dialect_prompt_text_placeholder=dict(
+        en="Dialect prompt text with prefix: <|Sichuan|>/<|Yue|>/<|Henan|> ",
         zh="带前缀方言提示词思维链文本，前缀如下：<|Sichuan|>/<|Yue|>/<|Henan|>，如：<|Sichuan|>走嘛，切吃那家新开的麻辣烫，听别个说味道硬是霸道得很，好吃到不摆了，去晚了还得排队！",
     ),
     # Dialogue input textbox
@@ -199,9 +199,9 @@ def check_monologue_text(text: str, prefix: str = None) -> bool:
         return False
     return True
 
-def check_dialect_prompt_cot_text(text: str, prefix: str = None) -> bool:
+def check_dialect_prompt_text(text: str, prefix: str = None) -> bool:
     text = text.strip()
-    # Check COT prefix tags
+    # Check Dialect Prompt prefix tags
     if prefix is not None and (not text.startswith(prefix)):
         return False
     text = text.strip()
@@ -223,7 +223,7 @@ def check_dialogue_text(text_list: List[str]) -> bool:
             return False
     return True
 
-def process_single(target_text_list, prompt_wav_list, prompt_text_list, use_prompt_cot, prompt_cot_text_list):
+def process_single(target_text_list, prompt_wav_list, prompt_text_list, use_dialect_prompt, dialect_prompt_text):
     spks, texts = [], []
     for target_text in target_text_list:
         pattern = r'(\[S[1-9]\])(.+)'
@@ -235,9 +235,9 @@ def process_single(target_text_list, prompt_wav_list, prompt_text_list, use_prom
     global dataset
     dataitem = {"key": "001", "prompt_text": prompt_text_list, "prompt_wav": prompt_wav_list, 
              "text": texts, "spk": spks, }
-    if use_prompt_cot:
+    if use_dialect_prompt:
         dataitem.update({
-            "prompt_cot_text": prompt_cot_text_list
+            "dialect_prompt_text": dialect_prompt_text
         })
     dataset.update_datasource(
         [
@@ -267,12 +267,12 @@ def process_single(target_text_list, prompt_wav_list, prompt_text_list, use_prom
         "sampling_params": sampling_params,
         "spk_ids": spk_ids,
         "infos": infos,
-        "use_prompt_cot": use_prompt_cot,
+        "use_dialect_prompt": use_dialect_prompt,
     }
-    if use_prompt_cot:
+    if use_dialect_prompt:
         processed_data.update({
-            "prompt_cot_text_tokens_for_llm": data["prompt_cot_text_tokens"],
-            "prompt_cot_prefix": data["prompt_cot_prefix"],
+            "dialect_prompt_text_tokens_for_llm": data["dialect_prompt_text_tokens"],
+            "dialect_prefix": data["dialect_prefix"],
         })
     return processed_data
 
@@ -280,10 +280,10 @@ def dialogue_synthesis_function(
     target_text: str,
     spk1_prompt_text: str | None = "",
     spk1_prompt_audio: str | None = None,
-    spk1_prompt_cot_text: str | None = "",
+    spk1_dialect_prompt_text: str | None = "",
     spk2_prompt_text: str | None = "",
     spk2_prompt_audio: str | None = None,
-    spk2_prompt_cot_text: str | None = "",
+    spk2_dialect_prompt_text: str | None = "",
     seed: int = 1988, # <-- seed 参数保留
 ):
     # ================== 设置随机种子 ==================
@@ -304,14 +304,14 @@ def dialogue_synthesis_function(
     progress_bar = gr.Progress(track_tqdm=True)
     prompt_wav_list = [spk1_prompt_audio, spk2_prompt_audio]
     prompt_text_list = [spk1_prompt_text, spk2_prompt_text] 
-    use_prompt_cot = spk1_prompt_cot_text.strip()!="" or spk2_prompt_cot_text.strip()!=""
-    prompt_cot_text_list = [spk1_prompt_cot_text, spk2_prompt_cot_text]
+    use_dialect_prompt = spk1_dialect_prompt_text.strip()!="" or spk2_dialect_prompt_text.strip()!=""
+    dialect_prompt_text_list = [spk1_dialect_prompt_text, spk2_dialect_prompt_text]
     data = process_single(
         target_text_list,
         prompt_wav_list,
         prompt_text_list,
-        use_prompt_cot,
-        prompt_cot_text_list,
+        use_dialect_prompt,
+        dialect_prompt_text_list,
     )
     results_dict = model.forward_longform(
         **data
@@ -360,9 +360,9 @@ def render_interface() -> gr.Blocks:
                         placeholder=i18n("spk1_prompt_text_placeholder"),
                         lines=3,
                     )
-                    spk1_prompt_cot_text = gr.Textbox(
-                        label=i18n("spk1_prompt_cot_text_label"),
-                        placeholder=i18n("spk1_prompt_cot_text_placeholder"),
+                    spk1_dialect_prompt_text = gr.Textbox(
+                        label=i18n("spk1_dialect_prompt_text_label"),
+                        placeholder=i18n("spk1_dialect_prompt_text_placeholder"),
                         value="",
                         lines=3,
                     )
@@ -380,9 +380,9 @@ def render_interface() -> gr.Blocks:
                         placeholder=i18n("spk2_prompt_text_placeholder"),
                         lines=3,
                     )
-                    spk2_prompt_cot_text = gr.Textbox(
-                        label=i18n("spk2_prompt_cot_text_label"),
-                        placeholder=i18n("spk2_prompt_cot_text_placeholder"),
+                    spk2_dialect_prompt_text = gr.Textbox(
+                        label=i18n("spk2_dialect_prompt_text_label"),
+                        placeholder=i18n("spk2_dialect_prompt_text_placeholder"),
                         value="",
                         lines=3,
                     )
@@ -414,16 +414,16 @@ def render_interface() -> gr.Blocks:
             inputs_for_examples = [
                 spk1_prompt_audio,
                 spk1_prompt_text,
-                spk1_prompt_cot_text,
+                spk1_dialect_prompt_text,
                 spk2_prompt_audio,
                 spk2_prompt_text,
-                spk2_prompt_cot_text,
+                spk2_dialect_prompt_text,
                 dialogue_text_input,
             ]
             
             example_headers = [
-                "S1 音频", "S1 文本", "S1 COT", 
-                "S2 音频", "S2 文本", "S2 COT", 
+                "S1 音频", "S1 文本", "S1 方言提示文本", 
+                "S2 音频", "S2 文本", "S2 方言提示文本", 
                 "对话内容"
             ]
             
@@ -440,15 +440,15 @@ def render_interface() -> gr.Blocks:
             global_lang = ["zh", "en"][lang]
             return [
                 
-                # spk1_prompt_{audio,text,prompt_cot_text}
+                # spk1_prompt_{audio,text,dialect_prompt_text}
                 gr.update(label=i18n("spk1_prompt_audio_label")),
                 gr.update(
                     label=i18n("spk1_prompt_text_label"),
                     placeholder=i18n("spk1_prompt_text_placeholder"),
                 ),
                 gr.update(
-                    label=i18n("spk1_prompt_cot_text_label"),
-                    placeholder=i18n("spk1_prompt_cot_text_placeholder"),
+                    label=i18n("spk1_dialect_prompt_text_label"),
+                    placeholder=i18n("spk1_dialect_prompt_text_placeholder"),
                 ),
                 # spk2_prompt_{audio,text}
                 gr.update(label=i18n("spk2_prompt_audio_label")),
@@ -457,8 +457,8 @@ def render_interface() -> gr.Blocks:
                     placeholder=i18n("spk2_prompt_text_placeholder"),
                 ),
                 gr.update(
-                    label=i18n("spk2_prompt_cot_text_label"),
-                    placeholder=i18n("spk2_prompt_cot_text_placeholder"),
+                    label=i18n("spk2_dialect_prompt_text_label"),
+                    placeholder=i18n("spk2_dialect_prompt_text_placeholder"),
                 ),
                 # dialogue_text_input
                 gr.update(
@@ -477,10 +477,10 @@ def render_interface() -> gr.Blocks:
             outputs=[
                 spk1_prompt_audio,
                 spk1_prompt_text,
-                spk1_prompt_cot_text,
+                spk1_dialect_prompt_text,
                 spk2_prompt_audio,
                 spk2_prompt_text,
-                spk2_prompt_cot_text,
+                spk2_dialect_prompt_text,
                 dialogue_text_input,
                 generate_btn,
                 generate_audio,
@@ -494,10 +494,10 @@ def render_interface() -> gr.Blocks:
                 dialogue_text_input,
                 spk1_prompt_text,
                 spk1_prompt_audio,
-                spk1_prompt_cot_text,
+                spk1_dialect_prompt_text,
                 spk2_prompt_text,
                 spk2_prompt_audio,
-                spk2_prompt_cot_text,
+                spk2_dialect_prompt_text,
                 seed_input,
             ],
             outputs=[generate_audio],
