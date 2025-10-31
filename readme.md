@@ -105,6 +105,11 @@ conda activate soulxpodcast
 pip install -r requirements.txt
 # If you are in mainland China, you can set the mirror as follows:
 pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com
+
+pip uninstall torch torchvision torchaudio
+pip install -U torch torchvision torchaudio
+pip install peft torchcodec
+
 ```
 
 ### Model Download
