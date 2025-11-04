@@ -1,5 +1,7 @@
 '''
 python run_api.py --model pretrained_models/SoulX-Podcast-1.7B
+
+python run_api_iter.py --input_dir=No_6_Light_Novel_Xiang_IndexTTS2_Chapter1 --output_dir=No_6_Light_Novel_Xiang_SoulX_Podcast_Chapter1
 '''
 
 import requests
